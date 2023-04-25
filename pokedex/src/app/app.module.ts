@@ -1,9 +1,15 @@
-import { NgModule } from '@angular/core';
+import { NgModule} from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ConsultaComponent } from './consulta/consulta.component';
+
+import {HttpClientModule} from '@angular/common/http';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+
+
+
 
 @NgModule({
   declarations: [
@@ -12,8 +18,13 @@ import { ConsultaComponent } from './consulta/consulta.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NgModule,
+    HttpClientModule,
+    NgbModule
   ],
+
+  
   providers: [],
   bootstrap: [AppComponent]
 })
