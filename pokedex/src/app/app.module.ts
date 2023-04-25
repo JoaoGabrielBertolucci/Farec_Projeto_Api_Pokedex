@@ -1,4 +1,5 @@
 import { NgModule} from '@angular/core';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -6,7 +7,6 @@ import { AppComponent } from './app.component';
 import { ConsultaComponent } from './consulta/consulta.component';
 
 import {HttpClientModule} from '@angular/common/http';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 
@@ -19,9 +19,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgModule,
-    HttpClientModule,
-    NgbModule
+    NgbModule,
+    HttpClientModule
   ],
 
   
