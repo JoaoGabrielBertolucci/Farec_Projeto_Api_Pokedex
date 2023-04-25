@@ -6,11 +6,11 @@ import { poke } from './poke';
 @Injectable({
   providedIn: 'root'
 })
-export class PokeeService {
+export class PokeService {
   constructor(private http : HttpClient) { }
 
-  getRandomDog() : Observable<poke>{
-    return this.http.get<poke>("https://assets.pokemon.com/assets/cms2/img/pokedex/full/001.png");
+  getPokemon(id: number) : Observable<poke>{
+    return this.http.get<poke>(`https://pokeapi.co/api/v2/pokemon/${id}`);
   }
 
 }
