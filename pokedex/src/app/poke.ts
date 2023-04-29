@@ -1,3 +1,6 @@
 export interface poke{
-   name : string
+   name : string;
+   id: number;
+   height : number;
+   weight : number;
 }
