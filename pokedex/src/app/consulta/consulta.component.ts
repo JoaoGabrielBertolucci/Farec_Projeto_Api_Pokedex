@@ -23,6 +23,7 @@ export class ConsultaComponent implements OnInit{
   }
 
   getName(){
+
     return this.Poke.name, this.Poke.id;
   
   }
