@@ -3,12 +3,14 @@
     <a class="btn btn-primary" role="button">Anterior</a>
     <button class="btn btn-primary" type="submit"style="margin-left: 3%;">Reset</button>
 
-    <button class="btn btn-primary" onclick="getName()" type="submit"style="margin-left: 3%;">Próximo</button>
+    <button class="btn btn-primary" onclick="LoadPoke()" type="submit"style="margin-left: 3%;">Próximo</button>
 
 </div>
 
-<div id="imagen1">
+<div id="imagen">
+    <!-- " https://assets.pokemon.com/assets/cms2/img/pokedex/detail/ + this.id + "/" " -->
     <img 
+        
         src="https://cdn-icons-png.flaticon.com/512/6996/6996000.png" 
         width = "500px"
         class="shadow rounded" >
@@ -16,10 +18,8 @@
 
 <div id="subtittle">
 
-
  <span>{{LoadPoke()}}</span>
- <span>{{getName()}}</span><br>
+ <span>{{getName()}}</span>
  
-
 </div>
   

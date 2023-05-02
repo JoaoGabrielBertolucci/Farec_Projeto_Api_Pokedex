@@ -7,15 +7,20 @@ import { PokeService } from '../pokee.service';
   styleUrls: ['./consulta.component.css']
 })
 export class ConsultaComponent implements OnInit{
+  
   constructor(private pokeS: PokeService){}
   
   ngOnInit(): void {
     this.LoadPoke();
   }
+  
+  
   Poke:  poke = {} as poke;
+  Poke_Indice: number = 1;
+  
   LoadPoke(){
     
-    this.pokeS.getPokemon(1).subscribe(
+    this.pokeS.getPokemon(this.Poke_Indice).subscribe(
       {
         next : Poke => this.Poke = Poke
       }
@@ -23,7 +28,7 @@ export class ConsultaComponent implements OnInit{
   }
 
   getName(){
-
+    
     return this.Poke.name;
   
   }

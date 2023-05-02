@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { ConsultaComponent } from './consulta/consulta.component';
 
 import {HttpClientModule} from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -20,7 +21,8 @@ import {HttpClientModule} from '@angular/common/http';
     BrowserModule,
     AppRoutingModule,
     NgbModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
 
   
