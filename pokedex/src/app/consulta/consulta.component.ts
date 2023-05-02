@@ -16,8 +16,13 @@ export class ConsultaComponent implements OnInit{
   
   
   Poke:  poke = {} as poke;
-  Poke_Indice: number = 1;
+  Poke_Indice: number = 0;
   
+  NextPoke(){
+    this.Poke_Indice = this.Poke_Indice + 1;
+    this.LoadPoke();
+  }
+
   LoadPoke(){
     
     this.pokeS.getPokemon(this.Poke_Indice).subscribe(
@@ -32,5 +37,7 @@ export class ConsultaComponent implements OnInit{
     return this.Poke.name;
   
   }
+
+ 
 
 }
