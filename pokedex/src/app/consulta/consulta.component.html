@@ -1,9 +1,8 @@
-<title>Pokedex Generator</title>
-<div id="buttonss" >
-    <a class="btn btn-primary" role="button">Anterior</a>
-    <button class="btn btn-primary" type="submit"style="margin-left: 3%;">Reset</button>
 
-    <button class="btn btn-primary" onclick="NextPoke()" type="submit"style="margin-left: 3%;">Próximo</button>
+<div id="buttonss" >
+    <a class="btn btn-primary" (click)="PrevPoke()" role="button">Anterior</a>
+
+    <button class="btn btn-primary" (click)="NextPoke()" type="submit"style="margin-left: 3%;">Próximo</button>
 
 </div>
 
@@ -11,15 +10,17 @@
     <!-- " https://assets.pokemon.com/assets/cms2/img/pokedex/detail/ + this.id + "/" " -->
     <img 
         
-        src="https://cdn-icons-png.flaticon.com/512/6996/6996000.png" 
+        src="{{Poke_img}}" 
         width = "500px"
         class="shadow rounded" >
 </div><br><br>
 
 <div id="subtittle">
-
- <span>{{LoadPoke()}}</span>
- <span>{{getName()}}</span>
+<h3>
+    <span>{{getName()}}</span><br>
+    <span>{{poke_number_str}}</span>
+</h3>
+ 
  
 </div>
   

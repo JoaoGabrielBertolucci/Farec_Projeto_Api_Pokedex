@@ -16,11 +16,38 @@ export class ConsultaComponent implements OnInit{
   
   
   Poke:  poke = {} as poke;
-  Poke_Indice: number = 0;
+  Poke_Indice: number = 1;
+  poke_number_str: string = "001";
   
+  Poke_img: string = "https://assets.pokemon.com/assets/cms2/img/pokedex/full/" + this.poke_number_str + ".png"; 
+
+  pokeNumberToString(){
+    if(this.Poke_Indice >= 10 && this.Poke_Indice < 100){
+      this.poke_number_str = "0" + this.Poke_Indice;
+    }
+    
+    else if(this.Poke_Indice >= 100){
+      this.poke_number_str = this.Poke_Indice.toString();
+    }
+    else{
+      this.poke_number_str = "00" + this.Poke_Indice;
+    }
+    
+  }
+
   NextPoke(){
     this.Poke_Indice = this.Poke_Indice + 1;
+    this.pokeNumberToString();
     this.LoadPoke();
+    this.Poke_img = "https://assets.pokemon.com/assets/cms2/img/pokedex/full/" + this.poke_number_str + ".png";
+
+  }
+
+  PrevPoke(){
+    this.Poke_Indice = this.Poke_Indice - 1;
+    this.pokeNumberToString();
+    this.LoadPoke();
+    this.Poke_img = "https://assets.pokemon.com/assets/cms2/img/pokedex/full/" + this.poke_number_str + ".png";
   }
 
   LoadPoke(){
@@ -35,6 +62,7 @@ export class ConsultaComponent implements OnInit{
   getName(){
     
     return this.Poke.name;
+    
   
   }
 
