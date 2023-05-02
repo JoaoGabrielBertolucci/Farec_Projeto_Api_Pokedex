@@ -15,7 +15,7 @@ export class ConsultaComponent implements OnInit{
   Poke:  poke = {} as poke;
   LoadPoke(){
     
-    this.pokeS.getPokemon().subscribe(
+    this.pokeS.getPokemon(1).subscribe(
       {
         next : Poke => this.Poke = Poke
       }
